@@ -104,9 +104,9 @@ function AddProduct() {
             onChange={handleTextChange}
           >
             <option value=''>Choose Product</option>
-            <option value='kits'>Kits</option>
-            <option value='training'>Training</option>
-            <option value='apparel'>Apparel</option>
+            <option value='Male'>Male</option>
+            <option value='Female'>Female</option>
+            <option value='Kid'>Kid</option>
           </Form.Control>
         </Form.Group>
 

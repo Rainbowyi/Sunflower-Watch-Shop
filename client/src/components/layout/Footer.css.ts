@@ -17,3 +17,7 @@ export const paragraph = style({
   fontWeight: vars.fontWeights.bold,
   padding: vars.space['1x'],
 });
+export const signup = style({
+  marginTop:"6px",
+  textDecoration:"none"
+})

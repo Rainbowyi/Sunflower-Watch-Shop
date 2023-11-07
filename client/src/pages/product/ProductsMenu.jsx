@@ -61,7 +61,7 @@ function ProductsPage() {
 
   return (
     <Container className='text-center mt-4'>
-      <h2>Sunflower</h2>
+      <h2>Sunflower Queen</h2>
       <p>
         <em>Watch Shop</em>
       </p>

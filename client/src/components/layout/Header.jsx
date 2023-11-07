@@ -22,8 +22,8 @@ const Header = () => {
             alt='timbertop united logo'
           /> */}
           <div className={styles.logoTextBox}>
-            <span className={styles.brand}>Sunflower Watch Shop</span>
-            <span className={styles.brandSub}>The Online Store</span>
+            <span className={styles.brand}>Sunflower Queen Watch Shop</span>
+            <span className={styles.brandSub}>The Official Online Store</span>
           </div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
