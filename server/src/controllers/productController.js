@@ -35,9 +35,9 @@ module.exports = {
             category: doc.data().category,
             price: doc.data().price,
             sizes: doc.data().sizes,
-            texture: doc.data().texture,
+            brand: doc.data().brand,
             onSale: doc.data().onSale,
-            isAvailable: doc.data().isAvailable,
+            smartphone: doc.data().smartphone,
             image: doc.data().image,
           });
         });
@@ -81,9 +81,9 @@ module.exports = {
         category: req.body.category,
         price: Number(req.body.price),
         sizes: req.body.sizes,
-        texture: req.body.texture,
+        brand: req.body.brand,
         onSale: req.body.onSale,
-        isAvailable: req.body.isAvailable,
+        smartphone: req.body.smartphone,
         image: downloadURL,
       });
       console.log(`Added Product ID:${response.id} to Firestore}`);
@@ -175,9 +175,9 @@ module.exports = {
         category: req.body.category,
         price: Number(req.body.price),
         sizes: req.body.sizes,
-        texture: req.body.texture,
+        brand: req.body.brand,
         onSale: req.body.onSale,
-        isAvailable: req.body.isAvailable,
+        smartphone: req.body.smartphone,
         image: downloadURL,
       });
       res.send(response);

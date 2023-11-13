@@ -4,9 +4,10 @@ import { vars } from '../../styles/themes.css';
 export const navbar = style({
   fontFamily: vars.fonts.brand,
   backgroundColor: vars.colors.primary,
-  padding: `${vars.space['3x']} 0`,
+
   transition: "background 0.2s ease-in, color 0.2s ease-in",
-  boxShadow: "rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"
+  boxShadow: "rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+  padding:"40px"
 })
 
 export const brandLink = style({
@@ -31,7 +32,7 @@ export const logoTextBox = style({
   gap: 0,
   position:"absolute",
   top:"20%",
-  left:"40%",
+  
 })
 
 export const brand = style({
@@ -59,7 +60,10 @@ export const navLink = style({
     color: vars.colors.brand
   }
 })
-// export const btn = style({
-//   position:"absolute",
-//   marginTop:"5%"
-// })
+export const dropdownDiv = style({
+  display:"flex",
+  gap:"20px",
+  position:"absolute",
+  right:"20%",
+  marginTop:"20px"
+ })

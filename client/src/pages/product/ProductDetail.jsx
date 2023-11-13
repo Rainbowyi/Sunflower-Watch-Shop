@@ -140,8 +140,11 @@ function ProductDetail() {
           {/* AUTH LINKS: EDIT & DELETE */}
           {user && (
             <div>
-              <TuLink to={`/store/product/edit/${id}`}>Edit</TuLink>
-              <TuButton onClick={handleDeleteClick} loadingState={loading}>
+              <TuLink to={`/store/product/edit/${id}`}>
+                 Edit
+                
+               </TuLink>
+              <button className={styles.btn} onClick={handleDeleteClick} loadingState={loading}>
                 {loading ? (
                   <Spinner
                     as='span'
@@ -153,7 +156,7 @@ function ProductDetail() {
                 ) : (
                   'Delete'
                 )}
-              </TuButton>
+              </button>
             </div>
           )}
         </div>

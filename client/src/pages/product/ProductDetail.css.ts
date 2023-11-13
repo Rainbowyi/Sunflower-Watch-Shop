@@ -33,3 +33,15 @@ export const productHeroContainer = style({
   padding: vars.space['0x'],
   width: '100%',
 });
+export const btn = style({
+  backgroundColor:vars.colors.gray300,
+  padding:"15px",
+  border:"none",
+  borderRadius:"20px",
+  fontFamily:"inherit",
+  fontSize:"16px",
+  fontWeight:vars.fontWeights.bolder,
+  cursor:"pointer",
+  
+
+})

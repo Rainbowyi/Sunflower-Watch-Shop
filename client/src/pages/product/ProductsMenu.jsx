@@ -6,6 +6,7 @@ import productService from '../../services/productService';
 import ProductsList from '../../components/features/products/ProductsList';
 import TuLoader from '../../components/common/TuLoader';
 import axios from 'axios';
+import TuButton from '../../components/common/TuButton';
 
 function ProductsPage() {
   // PRODUCTS STATE
@@ -68,7 +69,9 @@ function ProductsPage() {
       {/* Admin Section:Add page */}
       {user && (
         <div className='py-4'>
-          <TuLink to='/store/product/add'>Add Product</TuLink>
+          <TuLink to='/store/product/add'>
+            
+            Add Product</TuLink>
         </div>
       )}
       {/* Products Menu */}

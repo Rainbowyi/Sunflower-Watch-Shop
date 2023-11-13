@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Form, InputGroup, Row, Col, Spinner } from 'react-bootstrap';
-
+import * as styles from './AddProduct.css'
 import productService from '../../services/productService';
 import TuCard from '../../components/common/TuCard';
 import TuButton from '../../components/common/TuButton';
@@ -205,19 +205,9 @@ function AddProduct() {
         </Form.Group>
 
         {/* SUBMIT BUTTON */}
-        <TuButton loadingState={loading}>
-          {loading ? (
-            <Spinner
-              as='span'
-              animation='border'
-              size='sm'
-              role='status'
-              aria-hidden='true'
-            />
-          ) : (
-            'Submit'
-          )}
-        </TuButton>
+       <button className={styles.btn}>
+        Add Product
+       </button>
       </Form>
     </TuCard>
   );

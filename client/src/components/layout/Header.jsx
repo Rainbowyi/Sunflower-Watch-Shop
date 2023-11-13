@@ -5,9 +5,10 @@ import TuButton from '../common/TuButton';
 import TuLink from '../common/TuLink';
 
 import { Link } from 'react-router-dom';
-import { Container, Navbar, Nav } from 'react-bootstrap';
+import { Container, Navbar, Nav,Dropdown } from 'react-bootstrap';
 import { RiShoppingCartFill } from 'react-icons/ri';
-
+import { FiUsers } from 'react-icons/fi';
+import { AiOutlineShoppingCart } from 'react-icons/ai';
 const Header = () => {
   // ACCESS VARIABLES FROM HOOKS
   const { user, logout } = useAuth();
@@ -24,30 +25,30 @@ const Header = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
         <Navbar.Collapse id='responsive-navbar-nav'>
-          {/* STANDARD NAVLINKS */}
-          <Nav className='me-auto'>
-            <Nav.Link className={styles.navLink} as={Link} to='/store/products'>
-              Products
-            </Nav.Link>
-          </Nav>
-          {/* AUTH NAVLINKS */}
-          <Nav className={styles.btn}>
-            {!user && <TuLink to='/signup'>Sign&nbsp;Up</TuLink>}
-            {!user && <TuLink to='/login'>Log&nbsp;In</TuLink>}
-            {user && <TuLink to='/dashboard'>Dashboard</TuLink>}
-            {user && (
-              <TuButton
-                onClick={() => {
-                  logout();
-                }}
-              >
-                Logout
-              </TuButton>
-            )}
-            {
-             
-            }
-          </Nav>
+         <div className={styles.dropdownDiv}> 
+         <Dropdown>
+      <Dropdown.Toggle variant="info" id="dropdown-basic">
+        <FiUsers/>
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu>
+        <Dropdown.Item href="/login">Log In</Dropdown.Item>
+        <Dropdown.Item href="/signup">Sign In</Dropdown.Item>
+        <Dropdown.Item href="/">Home</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
+    <Dropdown>
+      <Dropdown.Toggle variant="info" id="dropdown-basic">
+        <AiOutlineShoppingCart/>
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu>
+        <Dropdown.Item href="/store/products">Buy Now</Dropdown.Item>
+        
+       
+      </Dropdown.Menu>
+    </Dropdown></div>
+         
         </Navbar.Collapse>
       </Container>
     </Navbar>

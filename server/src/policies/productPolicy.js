@@ -14,9 +14,9 @@ module.exports = {
       category: Joi.string().required(),
       price: Joi.number().required(),
       sizes: Joi.string().min(3).max(50).required(),
-      texture: Joi.string().min(3).max(50).required(),
+      brand: Joi.string().min(3).max(50).required(),
       onSale: Joi.boolean().required(),
-      isAvailable: Joi.boolean().required(),
+      smartphone: Joi.boolean().required(),
       image: Joi.any(),
       uploadedFile: Joi.string(),
     });
@@ -37,10 +37,10 @@ module.exports = {
         case 'description':
         case 'category':
         case 'sizes':
-        case 'texture':
+        case 'brand':
           next(
             ApiError.badRequest(
-              'You must provide a valid product information including description, category, sizes and/or texture'
+              'You must provide a valid product information including description, category, sizes and brand'
             )
           );
           break;
@@ -54,10 +54,10 @@ module.exports = {
           break;
 
         case 'onSale':
-        case 'isAvailable':
+        case 'smartphone':
           next(
             ApiError.badRequest(
-              'You must check whether the product is on sale and/or stock remains available for purchase'
+              'You must check whether the product is on sale and/or phone is smartphone ?'
             )
           );
           break;

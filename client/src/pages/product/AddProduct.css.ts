@@ -1,7 +1,7 @@
-import { style } from '@vanilla-extract/css';
+import { style, globalStyle } from '@vanilla-extract/css';
 import { vars } from '../../styles/themes.css';
 
-export const button = style({
+export const btn=style({
   backgroundColor:vars.colors.cyan300,
   padding:"15px",
   border:"none",
@@ -10,11 +10,5 @@ export const button = style({
   fontSize:"16px",
   fontWeight:vars.fontWeights.bolder,
   cursor:"pointer",
-  width:"100vh",
-
-  ":hover": {
-    color: vars.colors.complementary,
-    backgroundColor: vars.colors.primary,
-    border: `3px ${vars.colors.complementary} solid`,
-  }
+  width:"100vh"
 })

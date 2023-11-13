@@ -16,3 +16,17 @@ export const title = style({
   top:"50%"
  
 })
+
+export const btn = style({
+  backgroundColor:vars.colors.cyan300,
+  padding:"15px",
+  border:"none",
+  borderRadius:"20px",
+  fontFamily:"inherit",
+  fontSize:"16px",
+  fontWeight:vars.fontWeights.bolder,
+  cursor:"pointer"
+ })
+ export const btnLink =style({
+margin:"20px"
+ })
