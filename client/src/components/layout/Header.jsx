@@ -16,11 +16,7 @@ const Header = () => {
     <Navbar className={styles.navbar} variant='light' expand='lg' sticky='top'>
       <Container>
         <Navbar.Brand className={styles.brandLink} as={Link} to='/'>
-          {/* <img
-            className={styles.logo}
-            src={logoImg}
-            alt='timbertop united logo'
-          /> */}
+         
           <div className={styles.logoTextBox}>
             <span className={styles.brand}>Sunflower Queen Watch Shop</span>
             <span className={styles.brandSub}>The Official Online Store</span>
@@ -35,7 +31,7 @@ const Header = () => {
             </Nav.Link>
           </Nav>
           {/* AUTH NAVLINKS */}
-          <Nav>
+          <Nav className={styles.btn}>
             {!user && <TuLink to='/signup'>Sign&nbsp;Up</TuLink>}
             {!user && <TuLink to='/login'>Log&nbsp;In</TuLink>}
             {user && <TuLink to='/dashboard'>Dashboard</TuLink>}
@@ -49,9 +45,7 @@ const Header = () => {
               </TuButton>
             )}
             {
-              <TuButton>
-                <RiShoppingCartFill />
-              </TuButton>
+             
             }
           </Nav>
         </Navbar.Collapse>
