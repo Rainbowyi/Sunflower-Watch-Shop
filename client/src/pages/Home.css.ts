@@ -12,8 +12,9 @@ export const title = style({
   position:"absolute",
   display:"flex",
   flexDirection:"column",
-  right:"20%",
-  top:"50%"
+  right:"10%",
+  top:"50%",
+ 
  
 })
 

@@ -27,10 +27,10 @@ function EditProduct() {
     description: '',
     category: '',
     price: 0,
-    sizes: '',
-    texture: '',
+    
+    brand: '',
     onSale: false,
-    isAvailable: true,
+    smartphone: true,
     image: '',
   });
   const [loading, setLoading] = useState(true);
@@ -47,10 +47,10 @@ function EditProduct() {
     description,
     category,
     price,
-    sizes,
-    texture,
+    
+    brand,
     onSale,
-    isAvailable,
+    smartphone,
     image,
   } = productData;
 
@@ -193,7 +193,7 @@ function EditProduct() {
         <Form.Group className='mb-3'>
           <Row>
             {/* 4A: PRICE */}
-            <Col lg={4} md={4} sm={12}>
+            <Col lg={6} md={6} sm={12}>
               <Form.Label>Product price</Form.Label>
               <InputGroup>
                 <InputGroup.Text id='price-dollar'>$</InputGroup.Text>
@@ -209,28 +209,16 @@ function EditProduct() {
               </InputGroup>
             </Col>
 
-            {/* 4B: SIZES */}
-            <Col lg={4} md={4} sm={12}>
-              <Form.Label>Product sizing range</Form.Label>
-              <Form.Control
-                as='select'
-                name='sizes'
-                value={sizes}
-                onChange={handleTextChange}
-              >
-                <option value='range'>XS to XL</option>
-                <option value='single'>One Size Fits All</option>
-              </Form.Control>
-            </Col>
+            
 
-            {/* 4C: TEXTURE */}
-            <Col lg={4} md={4} sm={12}>
-              <Form.Label>Product texture</Form.Label>
+            {/* 4C: brand */}
+            <Col lg={6} md={6} sm={12}>
+              <Form.Label>Product Brand</Form.Label>
               <Form.Control
                 type='text'
-                placeholder='Enter product texture'
-                name='texture'
-                value={texture}
+                placeholder='Enter product brand'
+                name='brand'
+                value={brand}
                 onChange={handleTextChange}
               />
             </Col>
@@ -257,15 +245,15 @@ function EditProduct() {
 
             {/* 5B: IS AVAILABLE */}
             <Col lg={6} md={6} sm={12}>
-              <Form.Label>Product availability</Form.Label>
+              <Form.Label>Smartphone availability</Form.Label>
               <Form.Control
                 as='select'
-                name='isAvailable'
-                value={isAvailable}
+                name='smartphone'
+                value={smartphone}
                 onChange={handleTextChange}
               >
-                <option value={true}>In Stock</option>
-                <option value={false}>Out of Stock</option>
+                <option value={true}>Smartphone</option>
+                <option value={false}>Not Smartphone</option>
               </Form.Control>
             </Col>
             {/* END OF PRODUCT SALE DETAILS ROW */}

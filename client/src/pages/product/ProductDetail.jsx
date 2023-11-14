@@ -24,10 +24,10 @@ function ProductDetail() {
     description: '',
     category: '',
     price: 0,
-    sizes: '',
-    texture: '',
+    
+    brand: '',
     onSale: false,
-    isAvailable: true,
+    smartphone: true,
     image: '',
   });
   const [loading, setLoading] = useState(true);
@@ -39,9 +39,9 @@ function ProductDetail() {
     description,
     category,
     price,
-    sizes,
-    texture,
-    isAvailable,
+    
+    brand,
+    smartphone,
     image,
   } = productData;
 
@@ -133,8 +133,10 @@ function ProductDetail() {
           {/* HERO BOX */}
           <div className={styles.productHeroContainer}>
             <h2>{name}</h2>
-            <p>{priceFormatter(price)}</p>
-            <p>{description}</p>
+            <p><span className={styles.span}>Price:</span>{priceFormatter(price)}</p>
+            <p><span className={styles.span}>Description:</span>{description}</p>
+            <p><span className={styles.span}>Brand:</span>{brand}</p>
+            <p><span className={styles.span}>Smartphone:</span>{smartphone}</p>
           </div>
 
           {/* AUTH LINKS: EDIT & DELETE */}

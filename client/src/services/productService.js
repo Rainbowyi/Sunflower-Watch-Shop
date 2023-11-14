@@ -44,10 +44,9 @@ function prepareFormData(data, uploadedfile) {
   formData.append('description', data.description);
   formData.append('category', data.category);
   formData.append('price', data.price);
-  formData.append('sizes', data.sizes);
-  formData.append('texture', data.texture);
+  formData.append('brand', data.brand);
   formData.append('onSale', data.onSale);
-  formData.append('isAvailable', data.isAvailable);
+  formData.append('smartphone', data.smartphone);
   formData.append('image', data.image);
   if (uploadedfile) {
     formData.append('uploadedFile', uploadedfile);

@@ -34,7 +34,7 @@ export const productHeroContainer = style({
   width: '100%',
 });
 export const btn = style({
-  backgroundColor:vars.colors.gray300,
+  backgroundColor:vars.colors.grey300,
   padding:"15px",
   border:"none",
   borderRadius:"20px",
@@ -44,4 +44,9 @@ export const btn = style({
   cursor:"pointer",
   
 
+})
+
+export const span = style({ 
+  fontWeight:vars.fontWeights.bolder,
+  marginRight:"10px"
 })
